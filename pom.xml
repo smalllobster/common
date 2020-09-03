@@ -10,4 +10,16 @@
     <properties>
         <java.version>1.8</java.version>
     </properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots-repository</name>
+            <url>http://10.3.4.40:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases-repository</name>
+            <url>http://10.3.4.40:8081/repository/maven-snapshots/</url>
+        </repository>
+    </distributionManagement>
 </project>
