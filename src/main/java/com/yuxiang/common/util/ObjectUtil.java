@@ -2,9 +2,8 @@
 package com.yuxiang.common.util;
 
 import com.yuxiang.common.exception.YXException;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -17,7 +16,6 @@ import java.util.Map;
  * 开发时间: 2018年6月27日 <br>
  * 功能描述: <br>
  */
-@Slf4j
 public class ObjectUtil {
   /**
    * 将Object转换map
@@ -44,7 +42,6 @@ public class ObjectUtil {
           object = getMethod.invoke(obj);
         }
       } catch (Exception e) {
-        log.debug("objectToMap转换异常不做处理，继续执行！");
       }
       if (null != object) {
         if (null != alias && !alias.equals("")) {

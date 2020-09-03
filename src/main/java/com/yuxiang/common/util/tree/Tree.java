@@ -12,7 +12,6 @@ import com.yuxiang.common.util.tree.enums.TreeComponentType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -24,7 +23,6 @@ import java.util.stream.Collectors;
  * 功能描述: 树<br>
  */
 @Data
-@Slf4j
 @AllArgsConstructor
 @NoArgsConstructor
 public class Tree extends AbstractTreeComponent implements ITree {
@@ -307,7 +305,6 @@ public class Tree extends AbstractTreeComponent implements ITree {
     }
     time = System.currentTimeMillis() - time;
     if (time > 1000) {
-      log.warn("树形构建完成，耗时{}ms", time);
     }
     return this;
   }

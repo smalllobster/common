@@ -14,7 +14,6 @@ import java.util.*;
  * 功能描述: 写明作用，调用方式，使用场景，以及特殊情况<br>
  */
 
-@Slf4j
 public class BasePageUtil {
 
   public static void main(String[] args){
@@ -23,7 +22,6 @@ public class BasePageUtil {
       list.add(new Integer(i));
     }
     PageData t = getInstance().getPageData(list, 5);
-    log.info(t.toString());
   }
 
   private static BasePageUtil instance;

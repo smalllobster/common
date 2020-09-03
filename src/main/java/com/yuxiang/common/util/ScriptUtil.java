@@ -16,7 +16,6 @@ import java.util.Map;
  * 开发时间: 2018/11/30 <br>
  * 功能描述: 写明作用，调用方式，使用场景，以及特殊情况<br>
  */
-@Slf4j
 public class ScriptUtil {
 
   /**
@@ -45,7 +44,6 @@ public class ScriptUtil {
     try {
       result = (E) engine.eval(express);
     } catch (ScriptException e) {
-      log.warn("表达式执行异常： " + e.getMessage());
     }
     return result;
   }
@@ -75,13 +73,11 @@ public class ScriptUtil {
       result = (Boolean) engine.eval(express);
     } catch (ScriptException e) {
       result = false;
-      log.warn("表达式执行异常： " + e.getMessage());
     }
     return result;
   }
 
   public static void main(String[] args) {
-    log.info(evalBoolean("'' && 1", null) + "");
   }
 
 }
