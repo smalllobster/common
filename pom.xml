@@ -8,13 +8,12 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/><!-- lookup parent from repository -->
     </parent>
-    <groupId>com.yuxiang.common</groupId>
+    <groupId>com.yuxiang</groupId>
     <artifactId>common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>common</name>
     <packaging>jar</packaging>
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -23,44 +22,37 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
         </dependency>
 
         <!--api文档生成工具-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
         </dependency>
         <!--工具包-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${commons.lang3.version}</version>
         </dependency>
         <!--获取系统和浏览器信息工具包-->
         <dependency>
             <groupId>eu.bitwalker</groupId>
             <artifactId>UserAgentUtils</artifactId>
-            <version>${UserAgentUtils.version}</version>
         </dependency>
         <!--注释相关工具包-->
         <dependency>
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
-            <version>${reflections.version}</version>
         </dependency>
         <!--汉字转拼音-->
         <dependency>
             <groupId>org.clojars.cbilson</groupId>
             <artifactId>pinyin4j</artifactId>
-            <version>${pinyin4j.version}</version>
         </dependency>
         <!-- okhttp -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
-            <version>${okhttp.version}</version>
         </dependency>
     </dependencies>
     <distributionManagement>
