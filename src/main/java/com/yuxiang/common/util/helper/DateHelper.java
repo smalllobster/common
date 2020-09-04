@@ -25,6 +25,7 @@ import java.util.TimeZone;
  * 开发时间: 10:31 <br>
  * 功能描述: <br>
  */
+@SuppressWarnings("AlibabaAvoidNewDateGetTime")
 public class DateHelper extends DateUtils {
 
   public static final String DEFALT_DATE_STR = "--";

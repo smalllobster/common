@@ -18,8 +18,9 @@ import java.util.Objects;
 public class BeanHelper {
 
   public static Object mapToObject(Map<String, Object> map, Object obj) {
-    if (map == null)
-      return null;
+    if (map == null) {
+        return null;
+    }
 
     Field[] fields = obj.getClass().getDeclaredFields();
     for (Field field : fields) {

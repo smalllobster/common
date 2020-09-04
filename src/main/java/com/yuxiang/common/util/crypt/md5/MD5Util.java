@@ -103,7 +103,9 @@ public class MD5Util {
       ) {
         // read的过程中进行MD5处理，直到读完文件
         byte[] buffer = new byte[BUFFER_SIZE];
-        while (digestInputStream.read(buffer) > 0) ;
+        while (digestInputStream.read(buffer) > 0) {
+            ;
+        }
         // 拿到结果，也是字节数组，包含16个元素
         byte[] resultByteArray = digestInputStream.getMessageDigest().digest();
         // 把字节数组转换成字符串

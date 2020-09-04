@@ -19,11 +19,13 @@ public class BASE64Decoder extends CharacterDecoder {
 
   static {
     pem_convert_array = new byte[256];
-    for (int i = 0; i < 255; i++)
+    for (int i = 0; i < 255; i++) {
       pem_convert_array[i] = -1;
+    }
 
-    for (int j = 0; j < pem_array.length; j++)
+    for (int j = 0; j < pem_array.length; j++) {
       pem_convert_array[pem_array[j]] = (byte) j;
+    }
 
   }
 
@@ -46,22 +48,27 @@ public class BASE64Decoder extends CharacterDecoder {
     byte byte1 = -1;
     byte byte2 = -1;
     byte byte3 = -1;
-    if (i < 2)
+    if (i < 2) {
       throw new IOException("BASE64Decoder: Not enough bytes for an atom.");
+    }
     int j;
     do {
       j = inputstream.read();
-      if (j == -1)
+      if (j == -1) {
         throw new IOException("StreamExhausted");
+      }
     } while (j == 10 || j == 13);
     decode_buffer[0] = (byte) j;
     j = readFully(inputstream, decode_buffer, 1, i - 1);
-    if (j == -1)
+    if (j == -1) {
       throw new IOException("StreamExhausted");
-    if (i > 3 && decode_buffer[3] == 61)
+    }
+    if (i > 3 && decode_buffer[3] == 61) {
       i = 3;
-    if (i > 2 && decode_buffer[2] == 61)
+    }
+    if (i > 2 && decode_buffer[2] == 61) {
       i = 2;
+    }
     switch (i) {
       case 4: // '\004'
         byte3 = pem_convert_array[decode_buffer[3] & 0xff];

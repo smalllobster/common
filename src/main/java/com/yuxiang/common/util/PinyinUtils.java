@@ -53,7 +53,9 @@ public class PinyinUtils {
     Pattern pat = Pattern.compile(regEx);
     Matcher matcher = pat.matcher(str);
     boolean flg = false;
-    if (matcher.find()) flg = true;
+    if (matcher.find()) {
+        flg = true;
+    }
     return flg;
   }
 

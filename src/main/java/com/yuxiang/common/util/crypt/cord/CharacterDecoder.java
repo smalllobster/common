@@ -37,8 +37,9 @@ public abstract class CharacterDecoder {
   protected int readFully(InputStream inputstream, byte abyte0[], int i, int j) throws IOException {
     for (int k = 0; k < j; k++) {
       int l = inputstream.read();
-      if (l == -1)
+      if (l == -1) {
         return k != 0 ? k : -1;
+      }
       abyte0[k + i] = (byte) l;
     }
 
@@ -68,10 +69,11 @@ public abstract class CharacterDecoder {
         decodeLineSuffix(inputstream, outputstream);
       } while (true);
     } catch (IOException e) {
-      if (e.getMessage().equals("StreamExhausted"))
+      if (e.getMessage().equals("StreamExhausted")) {
         decodeBufferSuffix(inputstream, outputstream);
-      else
+      } else {
         throw e;
+      }
     }
   }
 

@@ -56,8 +56,12 @@ public class BasePageUtil {
       while (iterator.hasNext()) {
         i++;
         Object o = iterator.next();
-        if (i >= s) records.add(o);
-        if (i >= e) break;
+        if (i >= s) {
+          records.add(o);
+        }
+        if (i >= e) {
+          break;
+        }
       }
     }
     ans.setTotal(size);

@@ -37,8 +37,9 @@ public abstract class CharacterEncoder {
   protected int readFully(InputStream inputstream, byte abyte0[]) throws IOException {
     for (int i = 0; i < abyte0.length; i++) {
       int j = inputstream.read();
-      if (j == -1)
-        return i;
+      if (j == -1) {
+          return i;
+      }
       abyte0[i] = (byte) j;
     }
 
@@ -50,17 +51,21 @@ public abstract class CharacterEncoder {
     encodeBufferPrefix(outputstream);
     do {
       int j = readFully(inputstream, abyte0);
-      if (j == 0)
-        break;
+      if (j == 0) {
+          break;
+      }
       encodeLinePrefix(outputstream, j);
-      for (int i = 0; i < j; i += bytesPerAtom())
-        if (i + bytesPerAtom() <= j)
-          encodeAtom(outputstream, abyte0, i, bytesPerAtom());
-        else
-          encodeAtom(outputstream, abyte0, i, j - i);
+      for (int i = 0; i < j; i += bytesPerAtom()) {
+          if (i + bytesPerAtom() <= j) {
+              encodeAtom(outputstream, abyte0, i, bytesPerAtom());
+          } else {
+              encodeAtom(outputstream, abyte0, i, j - i);
+          }
+      }
 
-      if (j < bytesPerLine())
-        break;
+      if (j < bytesPerLine()) {
+          break;
+      }
       encodeLineSuffix(outputstream);
     } while (true);
     encodeBufferSuffix(outputstream);
@@ -90,14 +95,17 @@ public abstract class CharacterEncoder {
     int j;
     do {
       j = readFully(inputstream, abyte0);
-      if (j == 0)
-        break;
+      if (j == 0) {
+          break;
+      }
       encodeLinePrefix(outputstream, j);
-      for (int i = 0; i < j; i += bytesPerAtom())
-        if (i + bytesPerAtom() <= j)
-          encodeAtom(outputstream, abyte0, i, bytesPerAtom());
-        else
-          encodeAtom(outputstream, abyte0, i, j - i);
+      for (int i = 0; i < j; i += bytesPerAtom()) {
+          if (i + bytesPerAtom() <= j) {
+              encodeAtom(outputstream, abyte0, i, bytesPerAtom());
+          } else {
+              encodeAtom(outputstream, abyte0, i, j - i);
+          }
+      }
 
       encodeLineSuffix(outputstream);
     } while (j >= bytesPerLine());
