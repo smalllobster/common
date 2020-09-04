@@ -18,14 +18,17 @@ public class BASE64Encoder extends CharacterEncoder {
   public BASE64Encoder() {
   }
 
+  @Override
   protected int bytesPerAtom() {
     return 3;
   }
 
+  @Override
   protected int bytesPerLine() {
     return 57;
   }
 
+  @Override
   protected void encodeAtom(OutputStream outputstream, byte abyte0[], int i, int j) throws IOException {
     if (j == 1) {
       byte byte0 = abyte0[i];

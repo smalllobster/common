@@ -13,8 +13,6 @@ import java.util.UUID;
  * 功能描述: 写明作用，调用方式，使用场景，以及特殊情况<br>
  */
 public class OrderNoUtil {
-  protected final static SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-
   static OrderNoUtil orderNoUtil = new OrderNoUtil();
 
   public static OrderNoUtil getInstance() {
@@ -36,6 +34,7 @@ public class OrderNoUtil {
     if (hashCode < 0) {
       hashCode = -hashCode;
     }
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
     return sdf.format(new Date()).substring(2, 8) + String.format("%010d", hashCode);
   }
 }

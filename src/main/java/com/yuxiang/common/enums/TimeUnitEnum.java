@@ -25,6 +25,7 @@ public enum TimeUnitEnum implements IEnum {
   private Integer code;
   private String desc;
 
+  @Override
   @JsonValue
   public Integer getValue() {
     return this.code;

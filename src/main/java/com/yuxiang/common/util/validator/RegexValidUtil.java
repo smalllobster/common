@@ -159,7 +159,7 @@ public final class RegexValidUtil {
    * @return
    */
   public static final boolean regexBusinessCode(String businessCode) {
-    if ((businessCode.equals("")) || businessCode.length() != 18) {
+    if (("".equals(businessCode)) || businessCode.length() != 18) {
       return false;
     }
     String regex = "^([0-9ABCDEFGHJKLMNPQRTUWXY]{2})([0-9]{6})([0-9ABCDEFGHJKLMNPQRTUWXY]{10})$";

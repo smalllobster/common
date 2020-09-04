@@ -35,14 +35,17 @@ public class BASE64Decoder extends CharacterDecoder {
     decode_buffer = new byte[4];
   }
 
+  @Override
   protected int bytesPerAtom() {
     return 4;
   }
 
+  @Override
   protected int bytesPerLine() {
     return 72;
   }
 
+  @Override
   protected void decodeAtom(InputStream inputstream, OutputStream outputstream, int i) throws IOException {
     byte byte0 = -1;
     byte byte1 = -1;

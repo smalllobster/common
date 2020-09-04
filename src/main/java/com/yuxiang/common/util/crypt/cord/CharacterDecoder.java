@@ -69,7 +69,7 @@ public abstract class CharacterDecoder {
         decodeLineSuffix(inputstream, outputstream);
       } while (true);
     } catch (IOException e) {
-      if (e.getMessage().equals("StreamExhausted")) {
+      if ("StreamExhausted".equals(e.getMessage())) {
         decodeBufferSuffix(inputstream, outputstream);
       } else {
         throw e;

@@ -44,7 +44,7 @@ public class ObjectUtil {
       } catch (Exception e) {
       }
       if (null != object) {
-        if (null != alias && !alias.equals("")) {
+        if (null != alias && !"".equals(alias)) {
           map.put(new StringBuilder(alias).append("_").append(field.getName()).toString(), object);
         } else {
           map.put(field.getName(), object);
