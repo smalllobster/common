@@ -49,49 +49,13 @@ public enum ResultEnum implements CodeEnum {
   ANSWER_NOT_FOUND(3003, "找不到答案"),
   ANSWER_NOT_ASSIGN(3004, "未指定答案"),
 
-  WRONG_AUTHENTICATION(10001, "长时间未操作，请重新登录"),
-  USER_AUTHENTICATION_ERR(10002, "用户不存在或密码错误"),
-  ACCOUNT_EXPIRED_ERR(10003, "账户过期"),
-  ACCOUNT_LOCKED(10004, "账户锁定"),
-  ACCOUNT_DISABLED(10005, "账户不可用"),
-  CREDENTIALS_EXPIRED(10006, "证书过期"),
-  REALNAME_NOT_IDENTIFIED(10007, "请先完成实名认证"),
-
-  MOBILE_PHONE_NOT_IDENTIFIED(10008, "请先完成联系方式认证"),
-  PROTOCOL_NOT_IDENTIFIED(10009, "请先签署入会协议"),
-  MOBILE_PHONE_BEEN_USED(10010, "联系方式已被使用"),
-
-  DOCS_DOCUMENT_NOT_FOUND(15000, "文档模板不存在"),
-
-  TENDER_ERROR(21000, "签约失败"),
-  LESS_THAN_LOWEST_ACCOUNT(20001, "金额小于起投金额"),
-  LESS_THAN_LOWEST_SINGLE_LIMIT(20002, "金额小于单笔最低限额"),
-  MORE_THAN_MOST_SINGLE_LIMIT(20003, "金额超过单笔最大限额"),
-  MORE_THAN_MOST_AMOUNT(20004, "签约金额超过累计限额"),
-  MORE_THAN_ACCOUNT_WAIT(20005, "金额超过剩余额度"),
-  STATUS_INVALID(20006, "该产品当前不可签约"),
-  INCREASE_AMOUNT_INVALID(20007, "不满足金额递增规则"),
-  MORE_THAN_MAX_TENDER_USERS(20008, "超过最大签约人数"),
-  UNDEFINED_CALCULATOR(20009, "未定义的计息方式"),
-  NO_SUCH_PRODUCT(200010, "未找到相关产品信息"),
-  PROTOCOL_FILE_CREATING(200011, "协议生成中"),
-  NO_SUCH_TENDER(200012, "找不到该签约记录"),
-  ACCOUNT_WAIT_INVALID(200013, "不满足签约后剩余规模大于起购金额"),
-  NO_NATURAL_HALF_YEAR(200014, "未配置自然半年还款日"),
-  NO_NATURAL_QUARTERLY(200015, "未配置自然季度还款日"),
-  NO_RISK_APPRAISAL(200016, "未进行风险评估"),
-
-  ESIGN_INIT_PROJECT_FAIL(150000, "e签宝初始化失败"),
-  ESIGN_ADD_ACCOUNT_FAIL(150001, "e签宝开户失败"),
-  ESIGN_ADD_SEAL_FAIL(150002, "e签宝建章失败"),
-  ESIGN_SIGN_SEAL_FAIL(150003, "签章失败"),
-  ESIGN_DELETE_ACCOUNT_FAIL(150004, "e签宝销户失败"),
-
-  CBHB_RECHARGE_ERR(300001, "渤海充值异常"),
-  CBHB_TRANS_TYPE_ERR(300002, "交易类型异常"),
-  CBHB_SIGN_ERR(300003, "渤海签约失败"),
-  CBHB_QUERY_ERR(400001, "渤海查询失败"),
-  CBHB_STOE_DATE_ERR(500001, "参数不合规，开始日期大于结束日期");
+  WRONG_AUTHENTICATION(4001, "长时间未操作，请重新登录"),
+  USER_AUTHENTICATION_ERR(4002, "用户不存在或密码错误"),
+  ACCOUNT_EXPIRED_ERR(4003, "账户过期"),
+  ACCOUNT_LOCKED(4004, "账户锁定"),
+  ACCOUNT_DISABLED(4005, "账户不可用"),
+  CREDENTIALS_EXPIRED(4006, "证书过期"),
+  REALNAME_NOT_IDENTIFIED(4007, "请先完成实名认证");
 
   private Integer code;
   private String msg;
