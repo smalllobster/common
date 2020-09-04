@@ -1,15 +1,12 @@
 package com.yuxiang.common.result;
 
 import com.yuxiang.common.enums.ResultEnum;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 
 
 @Data
-@ApiModel("Response通用Bean")
 public class Result<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -17,16 +14,12 @@ public class Result<T> implements Serializable {
     //全局版本号
     private final String VERSION = "V1.0.0";
 
-    @ApiModelProperty("版本")
     private String version;
 
-    @ApiModelProperty("结果状态码")
     private Integer code;
 
-    @ApiModelProperty("返回信息")
     private String msg;
 
-    @ApiModelProperty("数据")
     private T data;
 
     /**
