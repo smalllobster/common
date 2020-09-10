@@ -3,7 +3,7 @@ package com.yuxiang.common.util.crypt.md5;
 
 
 import com.yuxiang.common.enums.ResultEnum;
-import com.yuxiang.common.exception.YXException;
+import com.yuxiang.common.exception.BaseException;
 import com.yuxiang.common.util.helper.StringHelper;
 
 import java.io.FileInputStream;
@@ -69,9 +69,9 @@ public class MD5Util {
       // 字符数组转换成十六进制字符串返回
       return bufferToHex(resultByteArray);
     } catch (NoSuchAlgorithmException e) {
-      throw new YXException("md5加密初始化失败！", e);
+      throw new BaseException("md5加密初始化失败！", e);
     } catch (Exception e) {
-      throw new YXException("md5加密失败！", e);
+      throw new BaseException("md5加密失败！", e);
     }
   }
 
@@ -85,7 +85,7 @@ public class MD5Util {
     try {
       return fileMD5(new FileInputStream(filePath));
     } catch (FileNotFoundException e) {
-      throw new YXException(ResultEnum.FILE_NOT_EXIST);
+      throw new BaseException(ResultEnum.FILE_NOT_EXIST);
     }
   }
 
@@ -112,9 +112,9 @@ public class MD5Util {
         return bufferToHex(resultByteArray);
       }
     } catch (NoSuchAlgorithmException e) {
-      throw new YXException("md5加密初始化失败!", e);
+      throw new BaseException("md5加密初始化失败!", e);
     } catch (Exception e) {
-      throw new YXException("md5加密失败！", e);
+      throw new BaseException("md5加密失败！", e);
     }
   }
 

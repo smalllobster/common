@@ -2,7 +2,7 @@
 package com.yuxiang.common.util.helper;
 
 
-import com.yuxiang.common.exception.YXException;
+import com.yuxiang.common.exception.BaseException;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -45,7 +45,7 @@ public class BeanHelper {
         }
         field.set(obj, value);
       } catch (IllegalAccessException e) {
-        throw new YXException("数据转换失败");
+        throw new BaseException("数据转换失败");
       }
     }
     return obj;

@@ -1,7 +1,7 @@
 
 package com.yuxiang.common.util;
 
-import com.yuxiang.common.exception.YXException;
+import com.yuxiang.common.exception.BaseException;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -80,7 +80,7 @@ public class ObjectUtil {
       }
       return javabean;
     } catch (Exception e) {
-      throw new YXException("转换失败", e);
+      throw new BaseException("转换失败", e);
     }
   }
 

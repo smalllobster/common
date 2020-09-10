@@ -11,51 +11,51 @@ import lombok.Data;
  * 功能描述: 异常<br>
  */
 @Data
-public class YXException extends RuntimeException {
+public class BaseException extends RuntimeException {
 
   private Integer code;
 
-  public YXException() {
+  public BaseException() {
     super(ResultEnum.ERROR.getMsg());
     this.code = ResultEnum.ERROR.getCode();
   }
 
-  public YXException(ResultEnum resultEnum) {
+  public BaseException(ResultEnum resultEnum) {
     super(resultEnum.getMsg());
     this.code = resultEnum.getCode();
   }
 
-  public YXException(ResultEnum resultEnum, String msg) {
+  public BaseException(ResultEnum resultEnum, String msg) {
     super(msg);
     this.code = resultEnum.getCode();
   }
 
-  public YXException(String msg) {
+  public BaseException(String msg) {
     super(msg);
     this.code = ResultEnum.ERROR.getCode();
   }
 
-  public YXException(Integer code, String msg) {
+  public BaseException(Integer code, String msg) {
     super(msg);
     this.code = code;
   }
 
-  public YXException(String msg, Exception e) {
+  public BaseException(String msg, Exception e) {
     super(msg, e);
     this.code = ResultEnum.ERROR.getCode();
   }
 
-  public YXException(ResultEnum resultEnum, Exception e) {
+  public BaseException(ResultEnum resultEnum, Exception e) {
     super(resultEnum.getMsg(), e);
     this.code = resultEnum.getCode();
   }
 
-  public YXException(ResultEnum resultEnum, String msg, Exception e) {
+  public BaseException(ResultEnum resultEnum, String msg, Exception e) {
     super(msg, e);
     this.code = resultEnum.getCode();
   }
 
-  public YXException(Integer code, String msg, Exception e) {
+  public BaseException(Integer code, String msg, Exception e) {
     super(msg, e);
     this.code = code;
   }

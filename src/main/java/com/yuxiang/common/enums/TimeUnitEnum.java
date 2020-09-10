@@ -1,7 +1,6 @@
 
 package com.yuxiang.common.enums;
 
-import com.baomidou.mybatisplus.enums.IEnum;
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +13,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum TimeUnitEnum implements IEnum {
+public enum TimeUnitEnum {
   YEAR(0, "年"),
   MONTH(1, "月"),
   DAY(2, "日"),
@@ -25,7 +24,6 @@ public enum TimeUnitEnum implements IEnum {
   private Integer code;
   private String desc;
 
-  @Override
   @JsonValue
   public Integer getValue() {
     return this.code;

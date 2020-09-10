@@ -3,7 +3,7 @@ package com.yuxiang.common.util.tree;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.yuxiang.common.exception.YXException;
+import com.yuxiang.common.exception.BaseException;
 import com.yuxiang.common.util.helper.StringHelper;
 import com.yuxiang.common.util.tree.builder.IComponentBuilder;
 import com.yuxiang.common.util.tree.component.AbstractTreeComponent;
@@ -38,7 +38,7 @@ public class Tree extends AbstractTreeComponent implements ITree {
     if (this.getChildren().size() == 1) {
       return this.getChildren().get(0);
     }
-    throw new YXException("根节点不唯一");
+    throw new BaseException("根节点不唯一");
   }
 
   @Override

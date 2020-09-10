@@ -1,8 +1,8 @@
 
 package com.yuxiang.common.util.validator;
 
-import com.baomidou.mybatisplus.toolkit.StringUtils;
 import com.yuxiang.common.enums.RegexEnum;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;

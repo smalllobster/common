@@ -1,7 +1,7 @@
 
 package com.yuxiang.common.util;
 
-import com.yuxiang.common.exception.YXException;
+import com.yuxiang.common.exception.BaseException;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
@@ -42,7 +42,7 @@ public class PinyinUtils {
         }
         return pinyinName;
       } else {
-        throw new YXException("您输入的【" + chineseStr + "】不是汉字");
+        throw new BaseException("您输入的【" + chineseStr + "】不是汉字");
       }
     }
     return null;
